@@ -29,6 +29,7 @@
   keras.preprocessing.text.Tokenizer(num_words=None, filters='!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n', lower=True, split=' ', char_level=False, oov_token=None, document_count=0)
   
   * 'ModuleNotFoundError: No module named tensorflow - ensure tensorflow has been installed.
+  * 'Off by one' error in tonkenizer is feature
 
 * Tokenizer.fit_on_texts()
 
@@ -36,7 +37,7 @@
 
 * Tokenizer.texts_to_sequences()
 
-  Assigns points based on the    
+  Assigns points based on the index's calculated via fit_on_texts.
 
 * pad_sequences
 
@@ -47,3 +48,7 @@
 https://keras.io/
 
 https://colab.research.google.com/drive/1OlQpHdZD7zVyZW56r8vI-L8BYylq_Umm#scrollTo=Np5170sqkDjo
+
+https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do
+
+https://github.com/keras-team/keras/issues/7551
