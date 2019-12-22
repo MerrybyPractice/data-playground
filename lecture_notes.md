@@ -41,6 +41,10 @@
 
 * pad_sequences
 
+  Pads sequences so that they are the same length. Set the final param, val, to what ever you want the max length of your sequences to be (ie, if you set val=100 and have a text sample of 101, are you ok with truncating that last value?)
+
+  keras.preprocessing.sequence.pad_sequences(sequences, maxlen=None, dtype='int32', padding='pre', truncating='pre', value=0.0)
+
 ### Pandas
 
 ## Sources
