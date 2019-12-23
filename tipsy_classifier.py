@@ -48,14 +48,16 @@ allWordIndices = np.asarray(allWordIndices)
 # one-hot matricize
 train_x = tokenizer.sequences_to_matrix(allWordIndices, mode='binary') 
 
-train_y = keras.utils.to_categorical(train_y, 2)
+train_y = train_y -1
+# print(train_y)
+train_y = keras.utils.to_categorical(train_y, 0)
 
 # Creating Model
 # layers will be exectued in order, treated like stack
 model = Sequential()
 # Layer 1, dropout 1
 # 512 outputs from layer 1, input_shape could take max words, if necessary, activation function relu
-model.add(Dense(512, input_shape=(), activation='relu'))
+model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.5))
 # Layer 2, dropout 2
 model.add(Dense(256, activation='sigmoid'))
@@ -65,7 +67,7 @@ model.add(Dense(2, activation='softmax'))
 
 #Compile the drinkers (i mean network, not a lot of virtual people hanging out and rating wine, that would be absurd)
 
-model.compile(loss='categorical_cossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Training comenses 
 
@@ -76,3 +78,8 @@ verbose=1,
 validation_split=0.1,
 shuffle=True)
 
+model_json = model.to_json()
+with open('tipsy_model.json', 'w') as json_file: 
+  json_file.write(model_json)
+
+model.save_weights('model.h5')

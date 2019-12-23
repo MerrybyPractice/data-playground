@@ -81,6 +81,12 @@ Dropout:
 
 ### Pandas
 
+### NumPy
+
+* Genfromtxt 
+  * https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html
+  * Load in your data from text file. Set how missing or incorrect data should be handled.
+
 ## Sources
 
 https://keras.io/
