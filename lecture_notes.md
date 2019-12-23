@@ -45,6 +45,18 @@
 
   keras.preprocessing.sequence.pad_sequences(sequences, maxlen=None, dtype='int32', padding='pre', truncating='pre', value=0.0)
 
+* Layers: 
+
+embedding: 
+SpatialDropout1D: 
+Bidirectional: 
+GlobalMaxPool1D: 
+AttributeError: 'Tensor' object has no attribute 'lower' - Need to pass the layer through in this format: maxed = GlobalMaxPool1D()(rnn)
+GlobalAvgPool1D: 
+AttributeError: 'Tensor' object has no attribute 'lower' = avged = GlobalAvgPool1D()(rnn)
+Concatenate: 
+Dense:
+
 ### Pandas
 
 ## Sources
@@ -56,3 +68,5 @@ https://colab.research.google.com/drive/1OlQpHdZD7zVyZW56r8vI-L8BYylq_Umm#scroll
 https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do
 
 https://github.com/keras-team/keras/issues/7551
+
+https://stackoverflow.com/questions/53153790/tensor-object-has-no-attribute-lower
