@@ -50,7 +50,7 @@ train_x = tokenizer.sequences_to_matrix(allWordIndices, mode='binary')
 
 train_y = train_y -1
 # print(train_y)
-train_y = keras.utils.to_categorical(train_y, 0)
+train_y = keras.utils.to_categorical(train_y, 3)
 
 # Creating Model
 # layers will be exectued in order, treated like stack
@@ -63,7 +63,7 @@ model.add(Dropout(0.5))
 model.add(Dense(256, activation='sigmoid'))
 model.add(Dropout(0.5))
 # Layer 3
-model.add(Dense(2, activation='softmax'))
+model.add(Dense(3, activation='softmax'))
 
 #Compile the drinkers (i mean network, not a lot of virtual people hanging out and rating wine, that would be absurd)
 
