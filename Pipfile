@@ -14,6 +14,7 @@ keras = "*"
 tensorflow = "*"
 tensorflow-hub = "*"
 tensorflow-datasets = "*"
+tf-keras = "*"
 
 [requires]
 python_version = "3.7"
