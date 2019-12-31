@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "/Users/merrycimakasky/.local/share/virtualenvs/data-playground-3R0Ocaib/bin/python",
+  "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true
 }
